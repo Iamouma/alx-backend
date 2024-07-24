@@ -5,6 +5,7 @@ Basic cache
 
 BaseCaching = __import__('base_caching').BaseCaching
 
+
 class BasicCache(BaseCaching):
     """
     Defines basic caching system
