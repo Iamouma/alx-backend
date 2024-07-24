@@ -29,4 +29,4 @@ All your functions should have a documentation (python3 -c 'print(__import__("my
 A documentation is not a simple word, it’s a real sentence explaining what’s the purpose of the module, class or method (the length of it will be verified)
 All your functions and coroutines must be type-annotated.
 Setup: Popular_Baby_Names.csv
-use this data file for your project
+use this data file for your project.
