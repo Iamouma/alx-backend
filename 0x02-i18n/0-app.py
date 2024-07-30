@@ -14,6 +14,7 @@ def hello_world():
     """
     Returns an html file
     """
+    return render_template('0-index.html')
 
 
 if __name__ == '__main__':
