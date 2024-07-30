@@ -1,18 +1,16 @@
 #!/usr/bin/env python3
-"""
-A basic flask app
+"""A simple flask app
 """
 
 
-from flask import FRlask, render_template
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 
 @app.route('/')
 def hello_world():
-    """
-    Returns an html file
+    """_summary_
     """
     return render_template('0-index.html')
 
