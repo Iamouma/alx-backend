@@ -8,7 +8,7 @@ Back-end
 
 
 ### Resources
-Read or watch:
+Readdd or watch:
 
 Flask-Babel
 Flask i18n tutorial
