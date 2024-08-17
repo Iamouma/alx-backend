@@ -49,7 +49,7 @@ $ cat base_caching.py
 """ BaseCaching module
 """
 
-class BaseCaching():
+##### class BaseCaching():
     """ BaseCaching defines:
       - constants of your caching system
       - where your data are stored (in a dictionary)
@@ -68,7 +68,7 @@ class BaseCaching():
         for key in sorted(self.cache_data.keys()):
             print("{}: {}".format(key, self.cache_data.get(key)))
 
-    def put(self, key, item):
+    ##### def put(self, key, item):
         """ Add an item in the cache
         """
         raise NotImplementedError("put must be implemented in your cache class")
