@@ -6,13 +6,13 @@ describe('createPushNotificationsJobs', () => {
   let queue;
 
   before(() => {
-    // Create a Kue queue test mode enabled
+    // Create a Kue queue and enable test mode
     queue = createQueue({ name: 'push_notification_code_test' });
     queue.testMode.enter();
   });
 
   after(() => {
-    // Clear the queue and exit test mode
+    // Exit test mode and shutdown the queue
     queue.testMode.exit();
     queue.shutdown(100, err => {
       if (err) {
@@ -22,14 +22,13 @@ describe('createPushNotificationsJobs', () => {
       }
     });
   });
-});
 
-afterEach(() => {
-  // Remove all jobs from the queue after each test
-  queue.testMode.clear();
-});
+  afterEach(() => {
+    // Clear the queue after each test
+    queue.testMode.clear();
+  });
 
- it('creates a job for each input object', () => {
+  it('creates a job for each input object', () => {
     const jobs = [
       {
         phoneNumber: '4153518780',
@@ -51,20 +50,14 @@ afterEach(() => {
 
     createPushNotificationsJobs(jobs, queue);
 
-    // Get all jobs from the queue
-    queue.on('job complete', (id, result) => {
-      queue.testMode.jobs((err, jobs) => {
-        if (err) throw err;
+    // Verify the jobs are created
+    const createdJobs = queue.testMode.jobs;
+    expect(createdJobs.length).to.equal(4);
 
-        expect(jobs.length).to.be.equal(4);
-
-        // Check that each job has the expected data
-        jobs.forEach(job => {
-          expect(job.type).to.be.equal('push_notification_code_3');
-          expect(job.data.phoneNumber).to.be.defined;
-          expect(job.data.message).to.be.defined;
-        });
-      });
+    // Check each job's data
+    createdJobs.forEach((job, index) => {
+      expect(job.type).to.equal('push_notification_code_3');
+      expect(job.data).to.deep.equal(jobs[index]);
     });
   });
 
