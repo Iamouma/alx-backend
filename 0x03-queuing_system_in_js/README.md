@@ -1,8 +1,8 @@
-Toggle navigation
+## Toggle navigation
 Curriculum
 Short Specializations
 Average: 140.09%
-0x03. Queuing System in JS
+## 0x03. Queuing System in JS
 Back-end
 JavaScript
 ES6
@@ -15,14 +15,14 @@ Kue
  Manual QA review must be done (request it when you are done with the project)
 
 
-Resources
+## Resources
 Read or watch:
 
 Redis quick start
 Redis client interface
 Redis client for Node JS
 Kue deprecated but still use in the industry
-Learning Objectives
+## Learning Objectives
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
 
 How to run a Redis server on your machine
@@ -33,7 +33,7 @@ How to deal with async operations with Redis
 How to use Kue as a queue system
 How to build a basic Express app interacting with a Redis server
 How to the build a basic Express app interacting with a Redis server and queue
-Requirements
+## Requirements
 All of your code will be compiled/interpreted on Ubuntu 18.04, Node 12.x, and Redis 5.0.7
 All of your files should end with a new line
 A README.md file, at the root of the folder of the project, is mandatory
@@ -47,7 +47,7 @@ and…
 Don’t forget to run $ npm install when you have the package.json
 
 Tasks
-0. Install a redis instance
+### 0. Install a redis instance
 mandatory
 Download, extract, and compile the latest stable Redis version (higher than 5.0.7 - https://redis.io/downloads/):
 
@@ -77,7 +77,7 @@ GitHub repository: alx-backend
 Directory: 0x03-queuing_system_in_js
 File: README.md, dump.rdb
  
-1. Node Redis Client
+### 1. Node Redis Client
 mandatory
 Install node_redis using npm
 
@@ -131,7 +131,7 @@ GitHub repository: alx-backend
 Directory: 0x03-queuing_system_in_js
 File: 0-redis_client.js
  
-2. Node Redis client and basic operations
+### 2. Node Redis client and basic operations
 mandatory
 In a file 1-redis_op.js, copy the code you previously wrote (0-redis_client.js).
 
@@ -175,7 +175,7 @@ GitHub repository: alx-backend
 Directory: 0x03-queuing_system_in_js
 File: 1-redis_op.js
  
-3. Node Redis client and async operations
+### 3. Node Redis client and async operations
 mandatory
 In a file 2-redis_op_async.js, let’s copy the code from the previous exercise (1-redis_op.js)
 
@@ -206,7 +206,7 @@ GitHub repository: alx-backend
 Directory: 0x03-queuing_system_in_js
 File: 2-redis_op_async.js
  
-4. Node Redis client and advanced operations
+### 4. Node Redis client and advanced operations
 mandatory
 In a file named 4-redis_advanced_op.js, let’s use the client to store a hash value
 
@@ -261,7 +261,7 @@ GitHub repository: alx-backend
 Directory: 0x03-queuing_system_in_js
 File: 4-redis_advanced_op.js
  
-5. Node Redis client publisher and subscriber
+### 5. Node Redis client publisher and subscriber
 mandatory
 In a file named 5-subscriber.js, create a redis client:
 
@@ -337,7 +337,7 @@ GitHub repository: alx-backend
 Directory: 0x03-queuing_system_in_js
 File: 5-subscriber.js, 5-publisher.js
  
-6. Create the Job creator
+### 6. Create the Job creator
 mandatory
 In a file named 6-job_creator.js:
 
@@ -373,7 +373,7 @@ GitHub repository: alx-backend
 Directory: 0x03-queuing_system_in_js
 File: 6-job_creator.js
  
-7. Create the Job processor
+### 7. Create the Job processor
 mandatory
 In a file named 6-job_processor.js:
 
@@ -427,7 +427,7 @@ GitHub repository: alx-backend
 Directory: 0x03-queuing_system_in_js
 File: 6-job_processor.js
  
-8. Track progress and errors with Kue: Create the Job creator
+### 8. Track progress and errors with Kue: Create the Job creator
 mandatory
 In a file named 7-job_creator.js:
 
@@ -518,7 +518,7 @@ GitHub repository: alx-backend
 Directory: 0x03-queuing_system_in_js
 File: 7-job_creator.js
  
-9. Track progress and errors with Kue: Create the Job processor
+### 9. Track progress and errors with Kue: Create the Job processor
 mandatory
 In a file named 7-job_processor.js:
 
@@ -601,7 +601,7 @@ GitHub repository: alx-backend
 Directory: 0x03-queuing_system_in_js
 File: 7-job_processor.js
  
-10. Writing the job creation function
+### 10. Writing the job creation function
 mandatory
 In a file named 8-job.js, create a function named createPushNotificationsJobs:
 
@@ -646,7 +646,7 @@ GitHub repository: alx-backend
 Directory: 0x03-queuing_system_in_js
 File: 8-job.js
  
-11. Writing the test for job creation
+### 11. Writing the test for job creation
 mandatory
 Now that you created a job creator, let’s add tests:
 
